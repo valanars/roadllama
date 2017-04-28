@@ -54,6 +54,7 @@
      <Compile Include="Assets\OnionManager.cs" />
      <Compile Include="Assets\PauseScript.cs" />
      <Compile Include="Assets\ScreenShake.cs" />
+     <Compile Include="Assets\backgrounds.cs" />
      <Compile Include="Assets\menus.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

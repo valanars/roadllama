@@ -14,6 +14,7 @@ public class Llama : MonoBehaviour {
 	public GameObject mob;
 
 	public bool respawning;
+	public bool pastFirstScreen = false;
 
 	public int numberOfOnions;
 	public int hitObstacle;
@@ -100,9 +101,12 @@ public class Llama : MonoBehaviour {
 
 		if (triggerHittingme.gameObject.tag == "Onion") {
 			onionManager.NumOfOnions = onionManager.NumOfOnions + 1;
-			onionManager.speed += onionManager.speed * 1.5f;
+			onionManager.speed += onionManager.speed + .1f;
 			score = score + 1.5f * Time.deltaTime;
-			//Destroy (triggerHittingme.gameObject);
+		}
+
+		if (triggerHittingme.gameObject.tag == "marker"){
+			pastFirstScreen = true;
 		}
 	}
 

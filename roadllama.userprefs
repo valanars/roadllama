@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/menus.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CameraMove.cs">
     <Files>
+      <File FileName="Assets/Llama.cs" Line="104" Column="49" />
       <File FileName="Assets/OnionBoys.cs" Line="25" Column="35" />
-      <File FileName="Assets/Llama.cs" Line="1" Column="1" />
-      <File FileName="Assets/OnionManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Mob.cs" Line="1" Column="1" />
-      <File FileName="Assets/PauseScript.cs" Line="20" Column="22" />
+      <File FileName="Assets/backgrounds.cs" Line="26" Column="41" />
       <File FileName="Assets/menus.cs" Line="1" Column="1" />
+      <File FileName="Assets/CameraMove.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
