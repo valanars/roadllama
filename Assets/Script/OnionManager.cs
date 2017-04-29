@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class OnionManager : MonoBehaviour {
 	
@@ -12,6 +13,8 @@ public class OnionManager : MonoBehaviour {
 
 	public GameObject llamaBoy;
 
+	public Text scoreText;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -19,6 +22,7 @@ public class OnionManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		UpdateOnionBoys ();
 
 		if (NumOfOnions <= 0){
 			speed = baseSpeed;
@@ -32,5 +36,9 @@ public class OnionManager : MonoBehaviour {
 			speed = speed * 1.5f;
 
 		}
+	}
+
+	void UpdateOnionBoys () {
+		scoreText.text = "Bloomin' Onions: " + NumOfOnions;
 	}
 }

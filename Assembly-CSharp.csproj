@@ -46,16 +46,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraMove.cs" />
-     <Compile Include="Assets\Jump_Thing.cs" />
-     <Compile Include="Assets\Llama.cs" />
-     <Compile Include="Assets\Mob.cs" />
-     <Compile Include="Assets\OnionBoys.cs" />
-     <Compile Include="Assets\OnionManager.cs" />
-     <Compile Include="Assets\PauseScript.cs" />
-     <Compile Include="Assets\ScreenShake.cs" />
-     <Compile Include="Assets\backgrounds.cs" />
-     <Compile Include="Assets\menus.cs" />
+     <Compile Include="Assets\Script\CameraMove.cs" />
+     <Compile Include="Assets\Script\Jump_Thing.cs" />
+     <Compile Include="Assets\Script\Llama.cs" />
+     <Compile Include="Assets\Script\Mob.cs" />
+     <Compile Include="Assets\Script\OnionBoys.cs" />
+     <Compile Include="Assets\Script\OnionManager.cs" />
+     <Compile Include="Assets\Script\PauseScript.cs" />
+     <Compile Include="Assets\Script\ScreenShake.cs" />
+     <Compile Include="Assets\Script\backgrounds.cs" />
+     <Compile Include="Assets\Script\menus.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
