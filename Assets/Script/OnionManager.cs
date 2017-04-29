@@ -11,6 +11,8 @@ public class OnionManager : MonoBehaviour {
 
 	public int NumOfOnions;
 
+	float Timer = 0.0f;
+
 	public GameObject llamaBoy;
 
 	public Text scoreText;
@@ -22,7 +24,8 @@ public class OnionManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		UpdateOnionBoys ();
+		Timer += Time.deltaTime;
+		UpdateTime ();
 
 		if (NumOfOnions <= 0){
 			speed = baseSpeed;
@@ -34,11 +37,11 @@ public class OnionManager : MonoBehaviour {
 		if (llamaHittingme.gameObject.tag == "Player") {
 			NumOfOnions = NumOfOnions + 1;
 			speed = speed * 1.5f;
-
+			Timer = Timer * 1.5f;
 		}
 	}
 
-	void UpdateOnionBoys () {
-		scoreText.text = "Bloomin' Onions: " + NumOfOnions;
+	void UpdateTime () {
+		scoreText.text = "Time: " + Timer;
 	}
 }
