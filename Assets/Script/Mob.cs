@@ -13,7 +13,7 @@ public class Mob : MonoBehaviour {
 	public float baseOffset;
 	public float offset;
 
-
+	public bool gameOver = false;
 
 	// Use this for initialization
 	void Start () {
@@ -28,7 +28,17 @@ public class Mob : MonoBehaviour {
 		if (playerManager.hitObstacle <= 0) {
 			offset = baseOffset;
 		} else if (playerManager.hitObstacle > 0 && playerManager.hitObstacle <= 1) {
+			offset = 5f;
+		} else if (playerManager.hitObstacle > 1 && playerManager.hitObstacle <= 2) {
+			offset = 4f;
+		} else if (playerManager.hitObstacle > 2 && playerManager.hitObstacle <= 3) {
 			offset = 3f;
+		} else if (playerManager.hitObstacle > 3 && playerManager.hitObstacle <= 4) {
+			offset = 2f;
+		} else if (playerManager.hitObstacle > 4 && playerManager.hitObstacle <= 5) {
+			offset = 1f;
+		} else if (playerManager.hitObstacle > 5) {
+			gameOver = true;
 		}
 
 		transform.position = currentPos;

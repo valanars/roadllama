@@ -37,14 +37,8 @@ public class Llama : MonoBehaviour {
 		Vector3 currentPos = transform.position;
 
 
-
-//		if (Input.GetKey (KeyCode.RightShift)) {
-//			currentPos.x += 1.5f * onionManager.speed * Time.deltaTime;
-//
-//		} 
-
 		if (respawning == false){
-			currentPos.x += onionManager.speed * Time.deltaTime;
+			//currentPos.x += onionManager.speed * Time.deltaTime;
 			score = score + Time.deltaTime; //score increases over time
 		} else if (respawning == true && numberOfOnions <= 0){
 			currentPos.x += 0 * onionManager.speed * Time.deltaTime;
@@ -56,6 +50,8 @@ public class Llama : MonoBehaviour {
 		if (grounded == true && Input.GetKeyDown (KeyCode.Space)){
 			playerSprite.AddForce(transform.up*jumpHeight,ForceMode2D.Impulse);
 			grounded = false;
+		} else if (grounded == false && Input.GetKeyDown (KeyCode.Space)){
+			playerSprite.AddForce (transform.up * -1 * jumpHeight, ForceMode2D.Impulse);
 		}
 
 		transform.position = currentPos;
@@ -101,13 +97,10 @@ public class Llama : MonoBehaviour {
 
 		if (triggerHittingme.gameObject.tag == "Onion") {
 			onionManager.NumOfOnions = onionManager.NumOfOnions + 1;
-			onionManager.speed += onionManager.speed + .1f;
+			onionManager.speed = onionManager.speed + .5f;
 			score = score + 1.5f * Time.deltaTime;
 		}
-
-		if (triggerHittingme.gameObject.tag == "marker"){
-			pastFirstScreen = true;
-		}
+			
 	}
 
 
