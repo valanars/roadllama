@@ -36,11 +36,7 @@ public class Llama : MonoBehaviour {
 		//Debug.Log (score);
 		Vector3 currentPos = transform.position;
 
-
-		if (respawning == false){
-			//currentPos.x += onionManager.speed * Time.deltaTime;
-			score = score + Time.deltaTime; //score increases over time
-		} else if (respawning == true && numberOfOnions <= 0){
+		 if (respawning == true && numberOfOnions <= 0){
 			currentPos.x += 0 * onionManager.speed * Time.deltaTime;
 			score = score + 0 * Time.deltaTime;
 		}
@@ -89,16 +85,16 @@ public class Llama : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D triggerHittingme){
 
 		if (triggerHittingme.gameObject.tag == "Obstacle"){
-			score = score - 5f;
 			hitObstacle = hitObstacle + 1;
-			//	Debug.Log ("lmao rip");
+			onionManager.Timer = onionManager.Timer - 50f;
 			Camera.main.GetComponent<ScreenShake> ().Shake ();
 		}
 
 		if (triggerHittingme.gameObject.tag == "Onion") {
 			onionManager.NumOfOnions = onionManager.NumOfOnions + 1;
 			onionManager.speed = onionManager.speed + .5f;
-			score = score + 1.5f * Time.deltaTime;
+			onionManager.Timer = onionManager.Timer + 30f;
+
 		}
 			
 	}

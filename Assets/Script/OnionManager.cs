@@ -11,10 +11,11 @@ public class OnionManager : MonoBehaviour {
 
 	public int NumOfOnions;
 
-	float Timer = 0.0f;
+	public float Timer = 0.0f;
 
 	public Llama player;
 	public Mob mobManager;
+	public Cursor cursor;
 
 	public GameObject llamaBoy;
 
@@ -24,14 +25,16 @@ public class OnionManager : MonoBehaviour {
 	public SpriteRenderer firstButton;
 	public Sprite[] bottomButton;
 	public SpriteRenderer secondButton;
-	public bool restart = false;
-	public bool mainMenu = false;
+	public Sprite[] overText;
+	public SpriteRenderer activeText;
+
 
 
 	// Use this for initialization
 	void Start () {
 		firstButton.sprite = topButton [0];
 		secondButton.sprite = bottomButton [0];
+		activeText.sprite = overText [0];
 		
 	}
 	
@@ -40,7 +43,7 @@ public class OnionManager : MonoBehaviour {
 
 		UpdateTime ();
 
-		if(mobManager.gameOver == false){
+	if (mobManager.gameOver == false){
 		
 		Timer += Time.deltaTime;
 
@@ -57,21 +60,21 @@ public class OnionManager : MonoBehaviour {
 			speed = 0;
 		}
 
-		if (mobManager.gameOver == true){
+		if (mobManager.gameOver == true && cursor.restartHover == true){
 			firstButton.sprite = topButton [1];
 			secondButton.sprite = bottomButton [1];
-			restart = true;
+			activeText.sprite = overText [1];
+		} else if (mobManager.gameOver == true && cursor.menuHover == true){
+			firstButton.sprite = topButton [2];
+			secondButton.sprite = bottomButton [2];
+			activeText.sprite = overText [1];
 		}
-
-			
-
 
 	}
 
 	void OnCollisionEnter2D (Collision2D llamaHittingme){
 		if (llamaHittingme.gameObject.tag == "Player") {
 			NumOfOnions = NumOfOnions + 1;
-			//speed = speed + .1f;
 			Timer = Timer * 1.5f;
 		}
 	}
