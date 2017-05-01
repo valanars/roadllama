@@ -1,0 +1,178 @@
+fileFormatVersion: 2
+guid: f1a08759bdd0f413990a405b3ea70dc1
+timeCreated: 1493601414
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: kangaroo boi_0
+    21300002: kangaroo boi_1
+    21300004: kangaroo boi_2
+    21300006: kangaroo boi_3
+    21300008: kangaroo boi_4
+    21300010: kangaroo boi_5
+    21300012: kangaroo boi_6
+    21300014: kangaroo boi_7
+    21300016: kangaroo boi_8
+    21300018: kangaroo boi_9
+    21300020: kangaroo boi_10
+    21300022: kangaroo boi_11
+    21300024: kangaroo boi_12
+    21300026: kangaroo boi_13
+    21300028: kangaroo boi_14
+    21300030: kangaroo boi_15
+    21300032: kangaroo boi_16
+    21300034: kangaroo boi_17
+    21300036: kangaroo boi_18
+    21300038: kangaroo boi_19
+    21300040: kangaroo boi_20
+    21300042: kangaroo boi_21
+    21300044: kangaroo boi_22
+    21300046: kangaroo boi_23
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kangaroo boi_0
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 137
+        width: 664
+        height: 785
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: kangaroo boi_1
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 121
+        width: 664
+        height: 784
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: kangaroo boi_2
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 153
+        width: 664
+        height: 785
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: kangaroo boi_3
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 153
+        width: 664
+        height: 785
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: kangaroo boi_4
+      rect:
+        serializedVersion: 2
+        x: 3207
+        y: 121
+        width: 664
+        height: 784
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: kangaroo boi_5
+      rect:
+        serializedVersion: 2
+        x: 3896
+        y: 137
+        width: 664
+        height: 785
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
