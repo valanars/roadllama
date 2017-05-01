@@ -22,25 +22,24 @@ public class Llama : MonoBehaviour {
 	bool grounded;
 
 	public float jumpHeight;
-	//public float moveSpeed;
+
+	public Animator playerAnim;
 
 	// Use this for initialization
 	void Start () {
 		playerSprite = GetComponent<Rigidbody2D> ();
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-
-		//Debug.Log (score);
 		Vector3 currentPos = transform.position;
 
 		 if (respawning == true && numberOfOnions <= 0){
 			currentPos.x += 0 * onionManager.speed * Time.deltaTime;
 			score = score + 0 * Time.deltaTime;
 		}
-
+			
 
 
 		if (grounded == true && Input.GetKeyDown (KeyCode.Space)){

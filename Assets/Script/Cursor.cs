@@ -6,6 +6,7 @@ public class Cursor : MonoBehaviour {
 
 	public bool restartHover = true;
 	public bool menuHover = false;
+	public Mob mob;
 
 	// Use this for initialization
 	void Start () {
@@ -28,9 +29,9 @@ public class Cursor : MonoBehaviour {
 		}
 		transform.position = currentPos;
 
-		if (menuHover == true && (Input.GetKeyDown (KeyCode.Return))) {
+		if (menuHover == true && (Input.GetKeyDown (KeyCode.Return)) && mob.gameOver == true) {
 			Application.LoadLevel ("Start");
-		} else if (restartHover == true && (Input.GetKeyDown (KeyCode.Return))){
+		} else if (restartHover == true && (Input.GetKeyDown (KeyCode.Return)) && mob.gameOver == true){
 			Application.LoadLevel ("Main Level");
 		}
 

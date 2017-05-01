@@ -5,6 +5,8 @@ using UnityEngine;
 public class menus : MonoBehaviour {
 
 
+	public bool Menu;
+
 	public bool playHover = true;
 	public bool creditHover = false;
 	public bool controlHover = false;
@@ -70,6 +72,10 @@ public class menus : MonoBehaviour {
 		}
 		if (controlHover == true && Input.GetKeyDown (KeyCode.Return)) {
 			Application.LoadLevel ("Controls");
+		}
+
+		if (Menu == false && Input.GetKey (KeyCode.Return)) {
+			Application.LoadLevel ("Start");
 		}
 		
 	}

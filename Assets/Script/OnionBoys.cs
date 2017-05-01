@@ -46,6 +46,10 @@ public class OnionBoys : MonoBehaviour {
 			currentPos.x = player.transform.position.x + randomIndex;
 		}
 
+		if (gameObjectHittingMe.gameObject.tag == "Obstacle") {
+			Destroy (gameObjectHittingMe);
+		}
+
 		transform.position = currentPos;
 	}
 }
