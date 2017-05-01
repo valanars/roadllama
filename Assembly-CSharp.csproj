@@ -52,6 +52,7 @@
      <Compile Include="Assets\Script\Jump_Thing.cs" />
      <Compile Include="Assets\Script\Llama.cs" />
      <Compile Include="Assets\Script\Mob.cs" />
+     <Compile Include="Assets\Script\Music.cs" />
      <Compile Include="Assets\Script\OnionBoys.cs" />
      <Compile Include="Assets\Script\OnionManager.cs" />
      <Compile Include="Assets\Script\PauseScript.cs" />

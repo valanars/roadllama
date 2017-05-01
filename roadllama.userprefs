@@ -1,22 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-<<<<<<< Updated upstream
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Llama.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Music.cs">
     <Files>
-      <File FileName="Assets/Script/Llama.cs" Line="47" Column="21" />
+      <File FileName="Assets/Script/Music.cs" Line="15" Column="3" />
+      <File FileName="Assets/Script/Llama.cs" Line="97" Column="81" />
       <File FileName="Assets/Script/Cursor.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/OnionBoys.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/menus.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/OnionManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/EnemySpawn.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Mob.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="../localcryptid/Assets/Scripts/localScriptid.cs">
-    <Files>
-      <File FileName="Assets/Script/OnionManager.cs" Line="40" Column="25" />
-      <File FileName="../localcryptid/Assets/Scripts/localScriptid.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/Llama.cs" Line="1" Column="1" />
->>>>>>> Stashed changes
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

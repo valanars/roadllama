@@ -8,6 +8,7 @@ public class Llama : MonoBehaviour {
 	public float score = 0;
 
 	public OnionManager onionManager;
+	public Mob mobManager;
 
 	public GameObject dust;
 	public GameObject respawn;
@@ -33,6 +34,9 @@ public class Llama : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		playerAnim.SetBool ("Grounded", grounded);
+
 		Vector3 currentPos = transform.position;
 
 		 if (respawning == true && numberOfOnions <= 0){
@@ -40,13 +44,14 @@ public class Llama : MonoBehaviour {
 			score = score + 0 * Time.deltaTime;
 		}
 			
-
+		if(mobManager.gameOver == false){
 
 		if (grounded == true && Input.GetKeyDown (KeyCode.Space)){
 			playerSprite.AddForce(transform.up*jumpHeight,ForceMode2D.Impulse);
 			grounded = false;
 		} else if (grounded == false && Input.GetKeyDown (KeyCode.Space)){
 			playerSprite.AddForce (transform.up * -1 * jumpHeight, ForceMode2D.Impulse);
+		}
 		}
 
 		transform.position = currentPos;
@@ -83,13 +88,13 @@ public class Llama : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D triggerHittingme){
 
-		if (triggerHittingme.gameObject.tag == "Obstacle"){
+		if (triggerHittingme.gameObject.tag == "Obstacle" && mobManager.gameOver == false){
 			hitObstacle = hitObstacle + 1;
 			onionManager.Timer = onionManager.Timer - 50f;
 			Camera.main.GetComponent<ScreenShake> ().Shake ();
 		}
 
-		if (triggerHittingme.gameObject.tag == "Onion") {
+		if (triggerHittingme.gameObject.tag == "Onion" && mobManager.gameOver == false) {
 			onionManager.NumOfOnions = onionManager.NumOfOnions + 1;
 			onionManager.speed = onionManager.speed + .5f;
 			onionManager.Timer = onionManager.Timer + 30f;
