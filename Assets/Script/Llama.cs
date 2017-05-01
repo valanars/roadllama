@@ -13,6 +13,7 @@ public class Llama : MonoBehaviour {
 	public GameObject dust;
 	public GameObject respawn;
 	public GameObject mob;
+	public GameObject sparkles;
 
 	public bool respawning;
 	public bool pastFirstScreen = false;
@@ -25,6 +26,12 @@ public class Llama : MonoBehaviour {
 	public float jumpHeight;
 
 	public Animator playerAnim;
+	public AudioSource source;
+
+	public AudioClip hit;
+	public AudioClip jump;
+	public AudioClip fall;
+
 
 	// Use this for initialization
 	void Start () {
@@ -49,8 +56,10 @@ public class Llama : MonoBehaviour {
 		if (grounded == true && Input.GetKeyDown (KeyCode.Space)){
 			playerSprite.AddForce(transform.up*jumpHeight,ForceMode2D.Impulse);
 			grounded = false;
+			source.PlayOneShot (jump);
 		} else if (grounded == false && Input.GetKeyDown (KeyCode.Space)){
 			playerSprite.AddForce (transform.up * -1 * jumpHeight, ForceMode2D.Impulse);
+				source.PlayOneShot (fall);
 		}
 		}
 
@@ -87,19 +96,27 @@ public class Llama : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D triggerHittingme){
+		Vector3 currentPos = transform.position;
 
 		if (triggerHittingme.gameObject.tag == "Obstacle" && mobManager.gameOver == false){
 			hitObstacle = hitObstacle + 1;
 			onionManager.Timer = onionManager.Timer - 50f;
 			Camera.main.GetComponent<ScreenShake> ().Shake ();
+			source.PlayOneShot (hit);
 		}
 
 		if (triggerHittingme.gameObject.tag == "Onion" && mobManager.gameOver == false) {
 			onionManager.NumOfOnions = onionManager.NumOfOnions + 1;
 			onionManager.speed = onionManager.speed + .5f;
 			onionManager.Timer = onionManager.Timer + 30f;
+			GameObject newObject = Instantiate (sparkles) as GameObject;
+			Vector3 newObjPos = newObject.transform.position;
+			newObjPos.x = currentPos.x;
+			newObjPos.y = currentPos.y;
+			newObject.transform.position = newObjPos;
 
 		}
+		transform.position = currentPos;
 			
 	}
 

@@ -31,7 +31,7 @@ public class EnemySpawn : MonoBehaviour {
 
     void Spawning()
     {
-		int randomIndex = Random.Range(11,20);
+		int randomIndex = Random.Range(9,17);
         enemyTimer += Time.deltaTime;         
 
 		if (enemyTimer >= enemyCoolDown)
