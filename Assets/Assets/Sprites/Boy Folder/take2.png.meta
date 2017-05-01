@@ -1,9 +1,12 @@
 fileFormatVersion: 2
-guid: 456d98a7ff1d142a3a48f8112b14345f
-timeCreated: 1493586066
+guid: dba96664bb60f47a184adcad83479349
+timeCreated: 1493657102
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: take2_0
+    21300002: take2_1
+    21300004: take2_2
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -68,7 +71,46 @@ TextureImporter:
     overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: take2_0
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 195
+        width: 621
+        height: 777
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: take2_1
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 69
+        width: 641
+        height: 911
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: take2_2
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 158
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
